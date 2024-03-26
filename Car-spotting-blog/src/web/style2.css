@@ -1,0 +1,27 @@
+.galeria-upload{
+    background-color: white;
+    border: solid 5px black;
+    border-radius: 20px;
+}
+.galeria-upload button{
+    border-radius: 10px;
+    padding: 5px;
+    border: solid 2px black;
+    overflow: hidden;
+}
+div.galeria-image{
+    border: 3px solid black;
+    float: left;
+    width: 30%;
+    margin: 1%;
+    overflow: hidden;
+}
+div.galeria-image img{
+    width: 100%;
+    height: auto;
+    border-bottom: solid 3px black;
+}
+div.galeria-title{
+    padding: 5px;
+    text-align: center;
+}

@@ -1,0 +1,172 @@
+//EX 1.1
+/*
+var l1 = 5
+var l2 = 1070
+var sum = l1+l2
+print("\(l1)+\(l2)=\(sum)")
+*/
+
+//EX 1.2
+/*
+let str = "Gdansk University of Technology"
+var out = ""
+for character in str{
+  if character == "n"{
+    out+="⭐️"
+  }
+  else{
+    out.append(character)
+  }
+}
+print(out)
+*/
+
+// EX 1.3
+/*
+let name = "Tomasz Sankowski"
+
+for char in name.reversed(){
+  print(char, terminator: "")
+}
+*/
+
+// EX 2.1
+/*
+let str = "I will pass this course with best mark, because Swift is great!"
+
+for _ in 1...11{
+  print(str)
+}
+*/
+
+// EX 2.2
+/*
+var n = 10
+
+for i in 1...n{
+  print(i*i)
+}
+*/
+
+// EX 2.3
+/*
+var n = 10
+
+for _ in 1...n{
+  for _ in 1...n{
+    print("@", terminator: "")
+  }
+  print()
+}
+*/
+
+// EX 3.1
+
+/*
+var numbers = [5, 10, 20, 15, 80, 13]
+
+print(numbers.max())
+
+var max = -1000
+for num in numbers{
+  if num>max{
+    max = num
+  }
+}
+
+print(max)
+*/
+
+// EX 3.2
+
+/*
+var numbers = [5, 10, 20, 15, 80, 13]
+
+for num in numbers.reversed(){
+  print(num)
+}
+*/
+
+// EX 3.3
+
+/*
+var allNumbers = [10, 20, 10, 11, 13, 20, 10, 30]
+var newNumbers = Array<Int>()
+for num in allNumbers{
+  if(!newNumbers.contains(num))
+  {
+    newNumbers.append(num)
+  }
+}
+
+print(newNumbers)
+*/
+
+// EX 4.1
+
+/*
+var number = 10
+
+var set = Set<Int>()
+
+for i in 1...number{
+  if(number%i==0){
+    set.insert(i)
+  }
+}
+
+print(set.sorted())
+*/
+
+// EX 5.1
+/*
+var flights: [[String: String]] = [
+    [
+        "flightNumber" : "AA8025",
+        "destination" : "Copenhagen"
+    ],
+    [
+        "flightNumber" : "BA1442",
+        "destination" : "New York"
+    ],
+    [
+        "flightNumber" : "BD6741",
+        "destination" : "Barcelona"
+    ]
+]
+
+var flightNumbers = Array<String>()
+for flight in flights{
+  if let number = flight["flightNumber"] {
+    flightNumbers.append(number)
+  }
+  // OR flightNumbers.append(flight["flightNumber"] ?? "NULL")
+}
+print(flightNumbers)
+//expected: flightNumbers = ["AA8025", "BA1442", "BD6741"]
+*/
+
+// EX 5.2
+/*
+var names = ["Hommer","Lisa","Bart"]
+
+var fullName = Array<[String : String]>()
+
+for name in names{
+  var tmp = [String : String]()
+  tmp["lastName"] = "Simpson"
+  tmp["firstName"] = name
+  fullName.append(tmp)
+}
+
+for fullNames in fullName{
+  print(fullNames)
+}
+//print(fullName)
+
+//expect: fullName = [
+//["lastName": "Simpson", "firstName": "Hommer"], 
+//["lastName": "Simpson", "firstName": "Lisa"], 
+//["lastName": "Simpson", "firstName": "Bart"]]
+
+*/

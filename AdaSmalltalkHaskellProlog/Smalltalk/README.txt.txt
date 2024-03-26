@@ -1,0 +1,1 @@
+The project smalltalk.st is just a class "Figuers" with subclasses that represent different geometric figures. Each class have overloaded a method to calculate surface area, scale the figure etc. The modification only creates "bag" to store Figures objects.

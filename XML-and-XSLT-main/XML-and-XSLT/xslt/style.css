@@ -1,0 +1,91 @@
+body{
+    font-family: Tahoma;
+    -webkit-text-stroke: 0.25px black;
+    background-color: skyblue;
+}
+header {
+            color: gray;
+            padding: 30px;
+            text-align: left;
+            margin-bottom: 10px;
+            -webkit-text-stroke: 1px black;
+            }   
+header .sizer{
+    font-size:300%;
+}
+header i::after{
+    content: '🏎️';
+    position: absolute;
+    transition: transform 1s ease-in;
+    will-change: transform;
+    
+}
+header i:hover::after{
+    transform: translateX(200px);
+}
+header:active{
+    color:red;
+}
+footer {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 20px;
+    border: 3px black solid;
+}
+.content{
+    border: 3px black solid;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: pink;
+    overflow: hidden;
+    font-size: 20px;
+}
+.fastest{
+    width: 100%;
+    border: 1px solid black;
+}
+.fastest td,th{
+    border: 1px solid black;
+}
+
+.right{
+    float: right;
+}
+.right img{
+    height:auto;
+    width:200px;
+}
+section{
+    overflow: hidden;
+}
+img:hover {
+	opacity:0.8;
+	cursor: not-allowed;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+	 margin-left: 5px;
+	 margin-right: 5px;
+}
+.paragraph{
+    color:red;
+    text-align: center;
+}
+@media only screen and (max-width: 600px){
+    header .sizer{
+    font-size:200%;
+    }
+    
+}
+@media only screen and (max-width: 700px){
+    header i:hover::after{
+    transform: translateX(100px);
+}
+}

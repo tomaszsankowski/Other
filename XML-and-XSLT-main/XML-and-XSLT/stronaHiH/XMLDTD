@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE samochody SYSTEM "dtd.dtd">
+<samochody>
+    <samochod marka="Bugatti">
+        <nazwa>Bugatti Veyron</nazwa>
+        <cena>3.700.000$</cena>
+        <datawydania>2016</datawydania>
+        <wymiary>
+            <dlugosc>4544mm</dlugosc>
+            <szerokosc>2038mm</szerokosc>
+            <wysokosc>1212mm</wysokosc>
+        </wymiary>
+        <parametry>
+            <silnik turbina="Tak" skrzynia="automatyczna">
+                <typ>W16</typ>
+                <pojemnosc paliwo="benzyna">8.0L</pojemnosc>
+                <moc momentObrotowy="1600Nm">1500KM</moc>
+                <naped>AWD</naped>
+            </silnik>
+            <predkosc>
+                Pojazd osiąga prędkość maksymalną równą 
+                <predkoscmax>440km/h</predkoscmax>, a prędkość stu kilometrów na godzinę otrzymamy nawet w 
+                <dosetki>2.5s</dosetki>.
+            </predkosc>
+        </parametry>
+        <media>
+            <zdjecie link="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/2017_Bugatti_Chiron.jpg/360px-2017_Bugatti_Chiron.jpg">Bugatti Chiron</zdjecie>
+            <strona link="https://pl.wikipedia.org/wiki/Bugatti_Chiron">Więcej o Chironie</strona>
+        </media>
+    </samochod>
+    <samochod marka="Ford">
+        <nazwa>Ford Mustang</nazwa>
+        <cena>105.000$</cena>
+        <rocznik>2022</rocznik>
+        <wymiary>
+            <dlugosc>4784mm</dlugosc>
+            <szerokosc>1916mm</szerokosc>
+            <wysokosc>1381mm</wysokosc>
+        </wymiary>
+        <parametry>
+            <silnik turbina="Nie" skrzynia="manualna">
+                <typ>V8</typ>
+                <pojemnosc paliwo="benzyna">5.0L</pojemnosc>
+                <moc momentObrotowy="529Nm">450KM</moc>
+                <naped>FWD</naped>
+            </silnik>
+            <predkosc>
+                Pojazd osiąga prędkość maksymalną równą 
+                <predkoscmax>240km/h</predkoscmax>, a prędkość stu kilometrów na godzinę otrzymamy nawet w 
+                <dosetki>4.9s</dosetki>.
+            </predkosc>
+        </parametry>
+        <media>
+            <zdjecie link="https://www.wyborkierowcow.pl/wp-content/uploads/2021/06/ford-mustang-cennik-2022-otwarcie-1024x683.jpg">Ford Mustang</zdjecie>
+            <strona link="https://www.wyborkierowcow.pl/ford-mustang-cena-wersje-cennik/">Więcej o Mustangu</strona>
+        </media>
+    </samochod>
+    <samochod marka="Toyota">
+        <nazwa>Toyota Supra</nazwa>
+        <cena>75.000$</cena>
+        <rocznik>1999</rocznik>
+        <wymiary>
+            <dlugosc>4515mm</dlugosc>
+            <szerokosc>1811mm</szerokosc>
+            <wysokosc>1265mm</wysokosc>
+        </wymiary>
+        <parametry>
+            <silnik turbina="Tak" skrzynia="manualna">
+                <typ>24V</typ>
+                <pojemnosc paliwo="benzyna">3.0L</pojemnosc>
+                <moc momentObrotowy="440Nm">330KM</moc>
+                <naped>RWD</naped>
+            </silnik>
+            <predkosc>
+                Pojazd osiąga prędkość maksymalną równą 
+                <predkoscmax>250km/h</predkoscmax>, a prędkość stu kilometrów na godzinę otrzymamy nawet w 
+                <dosetki>5.1s</dosetki>.
+            </predkosc>
+        </parametry>
+        <media>
+            <zdjecie link="https://www.autocentrum.pl/ac-file/car-version/57624b05582c7ddf278b9823/toyota-supra-iv-3-0-i-24v-t-turbo-330km-243kw-1993-2000.jpg">Toyota Supra</zdjecie>
+            <strona link="https://www.autocentrum.pl/dane-techniczne/toyota/supra/iv/silnik-benzynowy-3.0-i-24v-t-turbo-330km-1993-2000/">Więcej o Suprze</strona>
+        </media>
+    </samochod>
+</samochody>

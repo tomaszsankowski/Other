@@ -1,0 +1,87 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: Katalog pośredni (x64\Debug\) zawiera pliki udostępnione z innego projektu (szablon2vs17.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
+  main.cpp
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(52,2): warning C4091: "typedef ": zignorowano na lewo od "car" podczas gdy brak deklaracji zmiennej
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(59,2): warning C4091: "typedef ": zignorowano na lewo od "powerup" podczas gdy brak deklaracji zmiennej
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(70,2): warning C4091: "typedef ": zignorowano na lewo od "plot" podczas gdy brak deklaracji zmiennej
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(82,2): warning C4091: "typedef ": zignorowano na lewo od "character" podczas gdy brak deklaracji zmiennej
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(93,2): warning C4091: "typedef ": zignorowano na lewo od "toolsfps" podczas gdy brak deklaracji zmiennej
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(103,2): warning C4091: "typedef ": zignorowano na lewo od "toolsgame" podczas gdy brak deklaracji zmiennej
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(112,2): warning C4091: "typedef ": zignorowano na lewo od "npc" podczas gdy brak deklaracji zmiennej
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(120,2): warning C4091: "typedef ": zignorowano na lewo od "bullet" podczas gdy brak deklaracji zmiennej
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(201,76): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(201,60): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(201,44): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(201,29): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(207,71): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(207,55): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(207,39): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(207,24): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(208,71): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(208,55): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(208,39): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(208,24): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(209,73): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(209,57): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(209,41): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(209,25): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(248,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(252,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(274,13): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(284,13): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(328,104): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(351,107): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(355,105): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(455,42): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(455,33): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(457,42): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(457,33): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(459,42): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(459,33): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(461,42): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(461,33): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(514,88): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(516,88): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(518,88): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(520,88): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(657,117): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(719,117): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(826,41): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(826,33): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(826,24): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(826,16): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(827,41): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(827,33): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(827,24): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(827,16): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(828,41): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(828,33): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(828,24): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(828,16): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(829,41): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(829,33): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(829,24): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(829,16): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(830,24): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(830,16): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(905,13): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(908,17): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(943,7): warning C4101: "buffor": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(957,99): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(983,105): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(985,105): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(998,12): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1016,15): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1079,117): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1184,67): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1184,56): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1186,79): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1186,64): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1187,76): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1187,62): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1188,79): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1188,64): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1189,76): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1189,62): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1190,79): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\main.cpp(1190,64): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+  szablon2vs19.vcxproj -> C:\Users\Tomasz\Desktop\INFORMATYKA SEM1\Podstawy Programowania\graAtari\x64\Debug\szablon2vs19.exe

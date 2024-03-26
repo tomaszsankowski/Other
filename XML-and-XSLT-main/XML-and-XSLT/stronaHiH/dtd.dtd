@@ -1,0 +1,34 @@
+<!ELEMENT samochody (samochod+)>
+<!ELEMENT samochod (nazwa,cena?,(rocznik|datawydania),wymiary?,parametry,media)>
+<!ATTLIST samochod marka CDATA #REQUIRED>
+
+<!ELEMENT nazwa (#PCDATA)>
+<!ELEMENT cena (#PCDATA)>
+<!ELEMENT rocznik (#PCDATA)>
+<!ELEMENT datawydania (#PCDATA)>
+<!ELEMENT wymiary (dlugosc,szerokosc,wysokosc)>
+<!ELEMENT parametry (silnik,predkosc)>
+<!ELEMENT media (zdjecie*,strona*)>
+
+<!ELEMENT dlugosc (#PCDATA)>
+<!ELEMENT szerokosc (#PCDATA)>
+<!ELEMENT wysokosc (#PCDATA)>
+
+<!ELEMENT silnik (typ,pojemnosc,moc,naped)>
+<!ATTLIST silnik turbina (Tak|Nie) #IMPLIED>
+<!ATTLIST silnik skrzynia (automatyczna|manualna) #IMPLIED>
+<!ELEMENT typ (#PCDATA)>
+<!ELEMENT pojemnosc (#PCDATA)>
+<!ATTLIST pojemnosc paliwo (diesel|benzyna|gaz|elektryczny|hybrydowy) #IMPLIED>
+<!ELEMENT moc (#PCDATA)>
+<!ATTLIST moc momentObrotowy CDATA #REQUIRED>
+<!ELEMENT naped (#PCDATA)>
+
+<!ELEMENT predkosc (#PCDATA|predkoscmax|dosetki)*>
+<!ELEMENT predkoscmax (#PCDATA)>
+<!ELEMENT dosetki (#PCDATA)>
+
+<!ELEMENT zdjecie (#PCDATA)>
+<!ATTLIST zdjecie link CDATA "https://www.facebook.com/">
+<!ELEMENT strona (#PCDATA)>
+<!ATTLIST strona link CDATA "https://www.facebook.com/">

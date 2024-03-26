@@ -1,0 +1,10 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: Katalog pośredni (x64\Debug\) zawiera pliki udostępnione z innego projektu (szablon2vs19.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
+  main.cpp
+C:\Users\Tomasz\Desktop\graAtari\main.cpp(180,26): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\graAtari\main.cpp(179,32): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\graAtari\main.cpp(193,77): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\graAtari\main.cpp(196,77): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Tomasz\Desktop\graAtari\main.cpp(192,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Tomasz\Desktop\graAtari\main.cpp(195,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Tomasz\Desktop\graAtari\main.cpp(94,28): warning C4101: "rc": lokalna zmienna, do której nie istnieje odwołanie
+  szablon2vs17.vcxproj -> C:\Users\Tomasz\Desktop\graAtari\x64\Debug\szablon2vs17.exe

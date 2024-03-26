@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+<xs:element name="samochody" type="samochodyTyp"/> 
+<xs:complexType name="samochodyTyp">
+    <xs:sequence>
+        <xs:element name="samochod" type="samochodTyp" minOccurs="0" maxOccurs="unbounded">
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+    
+    
+
+<xs:complexType name="samochodTyp">
+    <xs:sequence>
+        <xs:element ref="nazwa"/>
+        <xs:element ref="cena" minOccurs = "0" maxOccurs = "1"/>
+        <xs:element ref="rocznik" minOccurs = "0" maxOccurs = "1"/>
+        <xs:element name="wymiary" type="wymiaryTyp"/>
+        <xs:element name="parametry" type="parametryTyp"/>
+        <xs:element name="media">
+            <xs:complexType>
+                <xs:all>
+                    <xs:element name="zdjecie" type="linkTyp"/>
+                    <xs:element name="strona" type="linkTyp"/>
+                </xs:all>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+    <xs:attribute name="marka" type="xs:string" use="required"/>
+</xs:complexType>
+    
+<xs:element name="nazwa">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="40"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+<xs:element name="cena">
+<xs:simpleType>
+    <xs:restriction base="xs:string">
+        <xs:pattern value="([0-9]{0,3}.[0-9]{0,3}.[0-9]{0,3}$)"/>
+    </xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="rocznik">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1900"/>
+            <xs:maxInclusive value="2022"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+    
+<xs:complexType name="wymiaryTyp">
+    <xs:sequence>
+        <xs:element ref="dlugosc"/>
+        <xs:element ref="szerokosc"/>
+        <xs:element ref="wysokosc"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:element name="dlugosc" type="dlugosciTyp"/>
+<xs:element name="szerokosc" type="dlugosciTyp"/>
+<xs:element name="wysokosc" type="dlugosciTyp"/>
+<xs:simpleType name="dlugosciTyp">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="([0-9]{3,}mm)"/>
+    </xs:restriction>
+</xs:simpleType>
+
+    
+<xs:complexType name="linkTyp">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+        <xs:attribute name="link" type="xs:anyURI" use="required"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+    
+<xs:complexType name="parametryTyp">
+    <xs:sequence>
+        <xs:element name="silnik" type="silnikTyp"/>
+        <xs:element name="predkosc">
+            <xs:complexType mixed="true">
+                <xs:sequence>
+                    <xs:element name="predkoscmax" >
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="([0-9]{1,}km/h)"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="dosetki">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="([0-9]{1,}.[0-9]{1}s)"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+    
+    
+
+<xs:complexType name="silnikTyp">
+    <xs:sequence>
+        <xs:element name="typ" type="typTyp"/>
+        <xs:element name="pojemnosc">
+            <xs:complexType>
+                <xs:simpleContent>
+                        <xs:restriction base="pojemnoscTyp">
+                            <xs:pattern value="([0-9]{1,2}.[0-9]{1}L)"/>
+                        </xs:restriction>
+                </xs:simpleContent>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="moc">
+            <xs:complexType>
+                <xs:simpleContent>
+                    <xs:extension base="mocTyp">
+                        <xs:attribute name="momentObrotowy" use="required" type="xs:string"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="naped" type="napedTyp"/>
+    </xs:sequence>
+    <xs:attribute ref="turbina" use="required">
+    </xs:attribute>
+    <xs:attribute name="skrzynia" use="required">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="manualna"/>
+                <xs:enumeration value="automatyczna"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+</xs:complexType>
+<xs:attribute name="turbina">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Tak"/>
+            <xs:enumeration value="Nie"/>
+        </xs:restriction>  
+    </xs:simpleType>  
+</xs:attribute>
+<xs:simpleType name="typTyp">
+    <xs:restriction base="xs:string">
+        <xs:minLength value="2"/>
+        <xs:maxLength value="10"/>
+    </xs:restriction>
+</xs:simpleType>
+    
+<xs:complexType name="pojemnoscTyp">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute name="paliwo" use="required" type="paliwoTyp"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+    
+<xs:simpleType name="mocTyp">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="([0-9]{1,4}KM)"/>
+    </xs:restriction>
+</xs:simpleType>
+    
+<xs:simpleType name="napedTyp">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="FWD"/>
+        <xs:enumeration value="AWD"/>
+        <xs:enumeration value="RWD"/>
+    </xs:restriction>
+</xs:simpleType>
+    
+<xs:simpleType name="paliwoTyp">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="benzyna"/>
+        <xs:enumeration value="diesel"/>
+        <xs:enumeration value="gaz"/>
+        <xs:enumeration value="elektryczny"/>
+    </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

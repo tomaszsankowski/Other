@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<engines>
+    <engine>
+        <example>Bugatti Veyron</example>
+        <characterictic>
+            <type benzyna="8.0L">W16</type>
+            <AWD to100="2.5" Vmax="440">automatyczna</AWD>
+        </characterictic>
+    </engine>
+    <engine>
+        <example>Ford Mustang</example>
+        <characterictic>
+            <type benzyna="5.0L">V8</type>
+            <FWD to100="4.9" Vmax="240">manualna</FWD>
+        </characterictic>
+    </engine>
+    <engine>
+        <example>Toyota Supra</example>
+        <characterictic>
+            <type benzyna="3.0L">24V</type>
+            <RWD to100="5.1" Vmax="250">manualna</RWD>
+        </characterictic>
+    </engine>
+</engines>

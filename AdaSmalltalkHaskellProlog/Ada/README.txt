@@ -1,0 +1,1 @@
+This small Ada project is a simulation of a pizza restaurant. In the program we use rendezvous to simulate delivering products and using them to create pizzas for customers.

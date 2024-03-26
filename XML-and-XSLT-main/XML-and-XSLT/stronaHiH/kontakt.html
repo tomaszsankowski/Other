@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>Moje Hobby</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header >
+        <h1 class="sizer"><strong><i>CAR SPOTTING</i></strong></h1>
+        <hr>
+    </header>
+    <nav>
+      <a class="button">Menu</a>
+        <div class="visible">
+        <div class="drop">
+          <a class="active" href="index.html">Strona Główna</a>
+          <ul>
+            <li><a href="#CHIRON">Bugatti</a></li>
+            <li><a href="#MUSTANG">Ford</a></li>
+            <li><a href="#SUPRA">Toyota</a></li>
+          </ul>
+      </div>
+      <a href="galeria.html">Galeria zdjęć</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="autor.html">O mnie</a>
+        </div>
+      
+    </nav>
+    <div class="content">
+        <h1 class="heading">Skontaktuj się w sprawie współpracy:</h1>
+        <form>
+        <p><b>Wypełnij podany formularz, a skontaktujemy się z tobą:</b></p><br>
+        <p>Dane kontaktowe:</p>
+        <label><input type="text" name="imie">Imię i nazwisko</label><br>
+        <label><input type="text" name="nazwisko">Miasto zamieszkania</label><br>
+        <label><input type="text" name="email">Email</label><br>
+        <p>Czy jesteś pełnoletni?</p>
+        <label><input type="radio" name="Wiek" value="tak">tak</label><br>
+        <label><input type="radio" name="Wiek" value="nie">nie</label><br>
+        <p>Jakie samochody zazwyczaj spotujesz?</p>
+        <select name="typy">
+        <option selected>Wszystkie</option>
+        <option>Sportowe</option>
+        <option>Klasyki</option>
+        <option>Slippery</option>
+        <option>Custom</option>
+        </select>
+        <p>Jakie marki aut najczęściej spotykasz w swoim mieście?</p>
+        <label><input type="checkbox" name="marka" value="Marcedes">Mercedes</label><br>
+        <label><input type="checkbox" name="marka" value="BMW">BMW</label><br>
+        <label><input type="checkbox" name="marka" value="Audi">Audi</label><br>
+        <label><input type="checkbox" name="marka" value="Lamborghini">Lamborghini</label><br>
+        <label><input type="checkbox" name="marka" value="Bugatti">Bugatti</label><br>
+        <label><input type="checkbox" name="marka" value="Inne">Inne marki:</label>
+        <label><input name="marka"></label>
+        <br>
+        <br>
+        <br>
+        <label><input type="submit" value="Wyślij formularz"></label>
+        <label><input type="reset" value="Wyczyść dane"></label>
+        </form>
+    </div>
+    <svg class="logo" height="140" width="500">
+                <ellipse cx="250" cy="70" rx="100" ry="50"
+                style="fill:red;stroke:black;stroke-width:10" />
+    </svg> 
+    <footer><h3><i>Tomasz Sankowski 193363 2022-10-21</i></h3></footer>
+</body>
+</html>
