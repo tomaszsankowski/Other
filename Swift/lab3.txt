@@ -1,0 +1,245 @@
+import Foundation
+
+// Używam tutaj przykładów z instrukcji
+// Zrobiłem wszystkie punkty w JSONem włącznie
+
+func printBig(_ number: Int) -> String {
+    if number > 1000000 {
+        let value = Double(number) / 1000000
+        return String(format: "%.1fMLN", value)
+    }
+    else if number > 1000 {
+        let value = Double(number) / 1000
+        return String(format: "%.1fK", value)
+    }
+    else {
+        return String(number)
+    }
+}
+
+protocol WypiszInheritance {
+    func wypisz()
+}
+
+struct Reactions : WypiszInheritance {
+    var likes: Int
+    var hearts: Int
+    var wows: Int
+    var angries: Int
+    var sads: Int
+    var hahas: Int
+    
+    init(likes: Int = 0, hearts: Int = 0, wows: Int = 0, angries: Int = 0, sads: Int = 0, hahas: Int = 0) {
+        self.likes = likes
+        self.hearts = hearts
+        self.wows = wows
+        self.angries = angries
+        self.sads = sads
+        self.hahas = hahas
+    }
+    
+    func wypisz() {
+        print("Reactions:\t", terminator:"")
+        print("Likes: \(printBig(likes)) | ", terminator:"")
+        print("Hearts: \(printBig(hearts)) | ", terminator:"")
+        print("Wows: \(printBig(wows)) | ", terminator:"")
+        print("Angries: \(printBig(angries)) | ", terminator:"")
+        print("Sads: \(printBig(sads)) | ", terminator:"")
+        print("Hahas: \(printBig(hahas))")
+    }
+}
+
+struct Profile : WypiszInheritance{
+    var name: String
+    var isVerified: Bool
+    
+    init(name: String = "Unknown", isVerified: Bool = false) {
+        self.name = name
+        self.isVerified = isVerified
+    }
+    
+    func wypisz() {
+        print("Profile:\t", terminator:"")
+        print("Name: \(name) | ", terminator:"")
+        if(isVerified){
+            print("Verified")
+        }
+        else{
+            print("Not verified")
+        }
+    }
+}
+
+struct Date : WypiszInheritance{
+    var day: Int
+    var month: Int
+    var year: Int
+    
+    init(day: Int = 1, month: Int = 1, year: Int = 2000) {
+        self.day = day
+        self.month = month
+        self.year = year
+    }
+    
+    func wypisz() {
+        let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        print("Date: \(day) \(monthNames[month]) \(year)")
+    }
+}
+
+enum MediaType {
+    case video
+    case photo
+    case music
+}
+
+class FacebookPost : WypiszInheritance{
+    var isPublic: Bool = false
+    var author: Profile = Profile()
+    var uploadDate: Date = Date(day: 1, month: 1, year: 2000)
+    var reactions: Reactions = Reactions()
+    var comments: Int = 0
+    var views: Int = 0
+    var shares: Int = 0
+    var content: MediaType = .photo
+    
+    init(isPublic: Bool, author: Profile, uploadDate: Date, reactions: Reactions, comments: Int, views: Int, shares: Int, content: MediaType) {
+        self.isPublic = isPublic
+        self.author = author
+        self.uploadDate = uploadDate
+        self.reactions = reactions
+        self.comments = comments
+        self.views = views
+        self.shares = shares
+        self.content = content
+    }
+    
+    func wypisz() {
+        print("Facebook Post: ", terminator:"")
+        if(isPublic){
+            print("(public)")
+        }
+        else{
+            print("(private)")
+        }
+        author.wypisz()
+        uploadDate.wypisz()
+        reactions.wypisz()
+        print("Comments: \(printBig(comments)) | ", terminator:"")
+        print("Views: \(printBig(views)) | ", terminator:"")
+        print("Shares: \(printBig(shares)) | ", terminator:"")
+        print("Content: \(content)")
+        print()
+    }
+}
+
+extension FacebookPost {
+    convenience init?(json: [String: Any]) {
+        guard let isPublic = json["isPublic"] as? Bool,
+              let authorJSON = json["author"] as? [String: Any],
+              let authorName = authorJSON["name"] as? String,
+              let authorVerified = authorJSON["isVerified"] as? Bool,
+              let uploadDateJSON = json["uploadDate"] as? [String: Int],
+              let dateDay = uploadDateJSON["day"],
+              let dateMonth = uploadDateJSON["month"],
+              let dateYear = uploadDateJSON["year"],
+              let reactionsJSON = json["reactions"] as? [String: Int],
+              let likes = reactionsJSON["likes"],
+              let hearts = reactionsJSON["hearts"],
+              let wows = reactionsJSON["wows"],
+              let angries = reactionsJSON["angries"],
+              let sads = reactionsJSON["sads"],
+              let hahas = reactionsJSON["hahas"],
+              let comments = json["comments"] as? Int,
+              let views = json["views"] as? Int,
+              let shares = json["shares"] as? Int,
+              let contentString = json["content"] as? String,
+              let content = MediaType(rawValue: contentString)
+        else {
+            return nil
+        }
+        
+        self.init(isPublic: isPublic,
+                  author: Profile(name: authorName, isVerified: authorVerified),
+                  uploadDate: Date(day: dateDay, month: dateMonth, year: dateYear),
+                  reactions: Reactions(likes: likes, hearts: hearts, wows: wows, angries: angries, sads: sads, hahas: hahas),
+                  comments: comments,
+                  views: views,
+                  shares: shares,
+                  content: content)
+    }
+}
+
+extension MediaType {
+    init?(rawValue: String) {
+        switch rawValue {
+        case "video":
+            self = .video
+        case "photo":
+            self = .photo
+        case "music":
+            self = .music
+        default:
+            return nil
+        }
+    }
+}
+
+let applePost = FacebookPost(isPublic: true,
+                             author: Profile(name: "Apple", isVerified: true),
+                             uploadDate: Date(day: 12, month: 9, year: 2018),
+                             reactions: Reactions(likes: 413567, hearts: 56700, wows: 3333, angries: 21, sads: 2, hahas: 0),
+                             comments: 189520,
+                             views: 18953225,
+                             shares: 333333,
+                             content: .video)
+                             
+let randomPost = FacebookPost(isPublic: false,
+                             author: Profile(name: "Harry", isVerified: false),
+                             uploadDate: Date(day: 20, month: 4, year: 2024),
+                             reactions: Reactions(likes: 1200, hearts: 567, wows: 3, angries: 21, sads: 280004300, hahas: 0),
+                             comments: 18,
+                             views: 1899990,
+                             shares: 123123,
+                             content: .photo)
+
+
+
+applePost.wypisz()
+
+randomPost.wypisz()
+
+let jsonString = """
+{
+    "isPublic": true,
+    "author": {
+        "name": "Microsoft",
+        "isVerified": true
+    },
+    "uploadDate": {"day": 29, "month": 9, "year": 2021},
+    "reactions": {"likes": 111567, "hearts": 780290, "wows": 3029, "angries": 231, "sads": 21, "hahas": 330},
+    "comments": 120520,
+    "views": 18000925,
+    "shares": 22333,
+    "content": "photo"
+}
+"""
+
+if let jsonData = jsonString.data(using: .utf8) {
+    do {
+        if let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
+            if let microsoftPost = FacebookPost(json: jsonObject) {
+                microsoftPost.wypisz()
+            } else {
+                print("Error creating object from JSON")
+            }
+        } else {
+            print("Error decoding JSON")
+        }
+    } catch {
+        print("Error creating JSON", error.localizedDescription)
+    }
+} else {
+    print("Error converting JSON to Data format")
+}
+
