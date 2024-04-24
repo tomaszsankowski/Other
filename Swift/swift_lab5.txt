@@ -1,0 +1,160 @@
+/////////////////////// ENUMS
+
+enum Difficulty {
+    case Easy
+    case Medium
+    case Hard
+}
+
+enum Category {
+    case Books
+    case Technology
+    case CarBrands
+}
+
+/////////////////////// GAME CLASS
+
+class Game {
+    var word: String
+    var tries_left: Int
+    var difficulty: Difficulty
+    var blurred_word: [Character]
+    
+    init(difficulty: Difficulty, category: Category) {
+    
+        self.difficulty = difficulty
+        
+        switch difficulty {
+            case .Easy:
+                tries_left = 15
+            case .Medium:
+                tries_left = 10
+            case .Hard:
+                tries_left = 5
+        }
+        
+        var words: [String]
+        
+        switch category {
+            case .Books:
+                words = ["lord of the rings", "hobbit", "harry potter", "swim", "introduction to algorithms"]
+            case .Technology:
+                words = ["computer", "keyboard", "mouse", "graphics card", "operating system"]
+            case .CarBrands:
+                words = ["volkswagen", "audi", "tesla", "volvo", "mercedes benz", "land rover"]
+        }
+        
+        let index = Int.random(in: 0..<words.count)
+        self.word = words[index]
+        self.blurred_word = Array(word).map { $0 == " " ? " " : "_" }
+        // print("Wylosowane słowo: \(self.word)")
+    }
+    
+    func printMap() -> Void {
+        for c in blurred_word{
+            print("\(c) ", terminator:"")
+        }
+        print("\t Lifes left: \(tries_left)")
+    }
+    
+    func checkIfInString(_ char: Character) -> Int {
+        var found = 0
+        for i in 0..<word.count {
+            if char == word[word.index(word.startIndex, offsetBy: i)] {
+                if blurred_word[i] != "_" {
+                    return -1
+                }
+                blurred_word[i] = char
+                found += 1
+            }
+        }
+        return found
+    }
+    
+    func startGame() -> Void {
+    
+        var spacesCount = 0
+        for char in word {
+            if char == " " {
+                spacesCount += 1
+            }
+        }
+        var letters_found = 0
+        let lettersCount = word.count - spacesCount
+
+        while letters_found < lettersCount {
+            printMap()
+            if let input = readLine(), let char = input.first {
+                let found = checkIfInString(char)
+                if found == 0 {
+                    print("No letters found!")
+                    tries_left -= 1
+                }
+                else if found == -1 {
+                    print("You already choosen this letter!")
+                }
+                else {
+                    letters_found += found
+                    print("Found \(found) letters!")
+                }
+            }
+            else {
+                print("Invalid input. Please enter a single letter.")
+            }
+            print("\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n")
+            
+            if tries_left == 0{
+                print("You lost, the word was \(word).")
+                return
+            }
+        }
+        
+        print("Congratulations! You guessed the word: \(word)")
+    }
+}
+
+/////////////////////// MAIN
+
+var difficulty: Difficulty = .Easy
+var category: Category = .Books
+
+/////////////////////// GET DIFFICULTY
+
+print("Choose difficulty: easy, medium, hard:")
+if let input = readLine()?.lowercased() {
+    switch input {
+    case "easy":
+        difficulty = .Easy
+    case "medium":
+        difficulty = .Medium
+    case "hard":
+        difficulty = .Hard
+    default:
+        print("Invalid difficulty level.")
+    }
+} else {
+    print("Invalid input.")
+}
+
+/////////////////////// GET CATEGORY OF WORDS
+
+print("Choose category: carbrands, books, technology:")
+if let input = readLine()?.lowercased() {
+    switch input {
+    case "carbrands":
+        category = .CarBrands
+    case "books":
+        category = .Books
+    case "technology":
+        category = .Technology
+    default:
+        print("Invalid category.")
+    }
+} else {
+    print("Invalid input.")
+}
+
+/////////////////////// PLAY THE GAME
+
+let game = Game(difficulty: difficulty, category: category)
+game.startGame()
